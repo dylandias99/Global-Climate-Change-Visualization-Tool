@@ -1,0 +1,886 @@
+body{
+	font-family: 'Verlag', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'Verlag';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Verlag'), url('https://fonts.cdnfonts.com/s/38686/VerlagBold.woff') format('woff');
+}
+
+.climate_header{
+    padding: 0.8em 0 0 0;
+    grid-area: header;
+    text-align: center;
+    background-color: #1877F2;
+    color: white;
+    height: 3em;
+}
+
+.climate_nav_bar{
+    grid-area: nav;
+    background-color: #1560bd;
+    text-align: center;
+    width: 11.5em;
+    font-size: 1.2em;
+    height:102em;
+}
+
+.nav_links{
+    display: inline-grid;
+    grid-template-columns: auto;
+    padding: 1em 0 1em 0;
+    grid-gap: 1em;
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+}
+
+.climate_content{
+    grid-area: content;
+    margin: 1em 0 0 1.5em;
+    width: 74em;
+}
+
+.climate_footer{
+    grid-area: footer;
+    background-color: #0E3386;
+    color: white;
+    text-align: center;
+    height: 4em;
+    padding:1.5em 0 0 0;
+}
+
+.climate_layout{
+    display: grid;
+    grid-template-areas:'header header header header'
+                        'nav content content content'
+                        'nav content content content'
+                        'footer footer footer footer';
+}
+
+.data_type_title{
+    font-size:1.5em;
+    color: #003399;
+}
+
+.data_type_radio{
+    color:#034694;
+    font-size:1.2em;
+    margin:0.2em 0 0 -0.8em;
+}
+
+.data_type_layout{
+    display: grid;
+    grid-template-columns: 11em auto;
+    grid-gap: 1px;
+    margin:0 0 1em 0.6em;
+}
+
+.exp_type_title{
+    font-size:1.5em;
+    color: #003399;
+}
+
+.exp_type_radio{
+    color:#034694;
+    font-size:1.2em;
+    margin:0.2em 0 0 -0.8em;
+}
+
+.exp_type_layout{
+    display: grid;
+    grid-template-columns: 11em auto;
+    grid-gap: 1px;
+    margin:0 0 1em 0.6em;
+}
+
+.exp_co2_analysis{
+    display: grid;
+    grid-template-columns:17em 17em 17em 17em;
+    grid-gap:1em;
+    margin:0 0 0em 0.8em;
+}
+
+.exp_co2_title{
+    text-align:center;
+    font-size:1.7em;
+    color: #003399;
+    grid-column:1/ span 4;
+}
+
+.exp_co2_item_2{
+    grid-column:1/ span 4;
+    color:#003399;
+    text-align:justify;
+    text-justify: inter-word;
+    font-size: 1.3em;
+}
+
+.exp_co2_item_3{
+    grid-column:1/ span 4;
+    margin:0 0 0 28.1em;
+}
+
+.exp_co2_item_4{
+    grid-column:1/ span 4;
+}
+
+.exp_co2_item_6{
+    grid-column:1/ span 4;
+    margin:0 0 0 28.1em;
+}
+
+.exp_co2_item_7{
+    grid-column:1/ span 4;
+    color:#003399;
+    font-size: 1.3em;
+    margin:0 0 0em 0;
+    text-align:center;
+}
+
+.exp_co2_item_8{
+    grid-column:1;
+    color:#003399;
+    font-size: 1.2em;
+    margin:0.3em 0 0 0.2em;
+    width:17em;
+}
+
+.exp_co2_item_9{
+    grid-column:2/ span 4;
+}
+
+.exp_co2_item_10{
+    grid-column:1/ span 4;
+}
+
+.exp_co2_item_11{
+   grid-column:1/ span 4;
+    color:#003399;
+    font-size: 1.3em;
+}
+
+.exp_co2_item_12{
+    grid-column:1/ span 2;
+}
+
+.exp_co2_item_13{
+    grid-column:3/ span 4;
+}
+
+.exp_co2_item_14{
+   grid-column:1/ span 4;
+    color:#003399;
+    font-size: 1.3em;
+}
+
+.exp_co2_item_15{
+    grid-column:1/ span 2;
+}
+
+.exp_co2_item_16{
+    grid-column:3/ span 4;
+}
+
+.exp_temp_analysis{
+    display: grid;
+    grid-template-columns:17em 17em 17em 17em;
+    grid-gap:1em;
+    margin:0 0 0 0.9em;
+}
+
+.exp_temp_title{
+    text-align:center;
+    font-size:1.7em;
+    color: #003399;
+    grid-column:1/ span 4;
+}
+
+.exp_temp_item_2{
+    grid-column:1/ span 4;
+    color:#003399;
+    text-align:justify;
+    text-justify: inter-word;
+    font-size: 1.3em;
+}
+
+.exp_temp_item_3{
+    grid-column:1/ span 4;
+}
+
+.exp_temp_item_5{
+    grid-column:1/ span 4;
+    color:#003399;
+    font-size: 1.3em;
+    margin:0 0 0em 0;
+    text-align:center;
+}
+
+.exp_temp_item_6{
+    grid-column:1/ span 4;
+}
+
+.exp_temp_item_7{
+    grid-column:1/ span 4;
+    margin:0 0 0em 0;
+    text-align:center;
+    color:#003399;
+    font-size: 1.3em;
+}
+
+.exp_temp_item_8{
+    grid-column:1/ span 4;
+}
+
+.exp_temp_item_9{
+    grid-column:1/ span 3;
+    text-align:center;
+    color:#003399;
+    font-size: 1.3em;
+    margin:0.3em 0 0 0;
+}
+
+.exp_temp_item_10{
+    grid-column:4;
+    margin:0 0em 0 -7.4em;
+    width:10em;
+}
+
+.exp_temp_item_11{
+    grid-column:1/ span 4;
+}
+
+.climate_co2_visualizations{
+    display: grid;
+    grid-template-columns:17em 17em 17em 17em;
+    grid-gap:1em;
+    margin:0 0 0 0.7em;
+}
+
+.climate_temp_visualizations{
+    display: grid;
+    grid-template-columns:17em 17em 17em 17em;
+    grid-gap:1em;
+    margin:0 0 0 0.7em;
+}
+
+.intro_content{
+    display: grid;
+    grid-template-column:12em 12em 12em;
+    grid-gap:1em;
+    margin:0.5em 1.5em 0 0em;
+}
+
+.overlay{
+    position:absolute;
+    width:5em;
+}
+.intro_item_1{
+    grid-column:1 /span 3;
+}
+
+.intro_title{
+    text-align:center;
+    font-size:2em;
+    color: #003399;
+}
+
+.intro_item_2{
+grid-column: 1/span 3;
+    color:#0E3386;
+    font-size:1.5em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text{
+    text-align:center;
+    position:absolute;
+    margin:1.3em 0em 0em 4em;
+    font-size:2em;
+    width:4em;
+}
+
+.img{
+    margin:12.3em 0 0 0;
+    position:absolute;
+    width: 23.5em;
+    height: 17.7em;
+    border-radius:0 0 30px 30px;
+}
+
+.intro_item_3{
+    grid-column:1/ span 3;
+}
+.intro_item_4{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:30em;
+    border-radius:30px;
+}
+
+.intro_item_5{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:30em;
+    border-radius:30px;
+}
+
+.intro_item_6{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:30em;
+    border-radius:30px;
+}
+
+.intro_item_7{
+    grid-column:1/ span 3;
+}
+
+.intro_item_8{
+    grid-column:1/ span 3;
+    color:#0E3386;
+    font-size:1.5em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.intro_item_9{
+    grid-column:1/ span 3;
+}
+
+
+.intro_hover:hover .img{
+  transition: .5s ease;
+  opacity: 0;
+}
+
+.intro_hover:hover .img_1{
+  transition: .5s ease;
+  opacity: 0;
+}
+
+.intro_hover:hover .text{
+  transition: .5s ease;
+  opacity: 0;
+}
+
+.intro_hover:hover .overlay{
+  opacity: 1;
+}
+
+.intro_item_10{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:20em;
+    border-radius:30px;
+    border:3px solid #003399;
+}
+
+.intro_item_11{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:20em;
+    border-radius:30px;
+    border:3px solid #003399;
+}
+
+.intro_item_12{
+    background-color:#1877F2;
+    color:white;
+    width:23.5em;
+    height:20em;
+    border-radius:30px;
+    border:3px solid #003399;
+}
+
+.intro_item_13{
+    grid-column:1 / span 3;
+
+}
+
+.intro_item_14{
+    font-size:1.5em;
+    color: #003399;
+    grid-column:1 / span 3;
+}
+
+.intro_item_15{
+    font-size:1.5em;
+    color: #003399;
+    grid-column:1 / span 3;
+}
+
+.intro_item_16{
+    font-size:1.5em;
+    color: #003399;
+    grid-column:1 / span 3;
+}
+
+
+.img_1{
+    margin:0em 0 0 0;
+    position:absolute;
+    width: 23.5em;
+    height: 20em;
+    border-radius:27px 27px 27px 27px;
+    background-color:white;
+}
+
+.overlay_text_1{
+    margin:3em 0em 0 1.3em;
+    text-align:justify;
+    font-size: 1.3em;
+    width:15.3em;
+    height:18em;
+}
+
+.overlay_text_2{
+    margin:2.5em 0em 0 1.3em;
+    text-align:justify;
+    font-size: 1.3em;
+    width:15.3em;
+    height:18em;
+}
+
+.overlay_text_3{
+    margin:3.6em 0em 0 1.3em;
+    text-align:justify;
+    font-size: 1.3em;
+    width:15.3em;
+    height:18em;
+}
+
+.overlay{
+    transition: .5s ease;
+    opacity: 0;
+}
+
+
+.overlay_text_4{
+    margin:2.25em 0em 0 1.3em;
+    text-align:justify;
+  text-justify: inter-word;
+    font-size: 1.3em;
+    width:15.3em;
+    height:13em;
+}
+
+.overlay_text_5{
+    margin:2.2em 0em 0 1.3em;
+    text-align:justify;
+    font-size: 1.3em;
+    width:15.3em;
+    height:13em;
+}
+
+.overlay_text_6{
+    margin:1.7em 0em 0 1.3em;
+    text-align:justify;
+    text-justify: inter-word;
+    font-size: 1.3em;
+    width:15.3em;
+    height:12em;
+}
+
+.visual_box{
+    background-color: #003399;
+    height:10em;
+}
+
+.visual_box_1{
+    background-color: #050100;
+    height:10em;
+}
+
+.visual_box_2{
+    background-color: #414141;
+    height:10em;
+}
+
+.visual_box_3{
+    background-color: #59515E;
+    height:10em;
+}
+
+.year_dropdown_content{
+    margin: 0em 0 0 1.5em;
+    width: 14em;
+}
+
+.country_dropdown_content{
+    margin: 1em 0 0 1.5em;
+    width: 14em;
+}
+
+.country_year{
+    margin-left: 2.6em;
+    line-height: 2.8em;
+    color: white;
+    font-size: 1.2em;
+}
+
+.title_box{
+    color: white;
+    font-size: 1.45em;
+    width: 6em;
+
+}
+
+.number_coal_value{
+    color:#414141;
+}
+
+.number_gas_value{
+    color:#59515E;
+}
+
+.number_oil_value{
+    color:#050100;
+}
+
+.number_box{
+    font-weight: lighter;
+    background-color:white;
+    text-align:center;
+    width:4.2em;
+    height:1.2em;
+    border-radius: 8px;
+    font-size:1.85em;
+}
+
+.number_box_content{
+    margin:2.2em 0px 0 20px;
+    display: grid;
+    grid-template-columns:6em 15em;
+    grid-gap: 1px;
+}
+
+.image_item{
+    grid-row: 1 / span 2;
+}
+
+.fossil_fuels{
+    grid-column: 3/ span 4;
+    text-align: center;
+}
+
+.climate_years{
+    grid-column: 1 / span 4;
+}
+
+.visualization_item_5{
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.fuel_year{
+    font-size: 1.3em;
+    color: #003399;
+}
+
+.visualization_item_7{
+    grid-column: 1 / span 4;
+}
+
+.visualization_item_9{
+    grid-column: 1 / span 2;
+}
+
+.polar_chart_title{
+    text-align:center;
+    color:#003399;
+    font-size: 1.3em;
+    margin:0.5em 0 0 0;
+}
+
+.fossil_fuel_radar{
+    display:grid;
+    grid-row-gap:1em;
+}
+
+.visualization_item_10{
+    grid-column: 3/ span 4;
+}
+
+.country_dropdown_content_line{
+    grid-column: 1/ span 2.5;
+}
+
+.visualization_item_11{
+    grid-column: 1/ span 4;
+}
+
+.area_chart_title{
+    padding:0.3em 0 0.6em 0em;
+    font-size: 1.3em;
+    text-align:center;
+    color: #003399;
+}
+
+.visualization_item_12{
+    grid-column:1/ span 3;
+}
+
+.visualization_item_13{
+    grid-column:4;
+}
+
+.visualization_item_14{
+    grid-column:1/ span 4;
+}
+
+.range_slider_line{
+    grid-column: 1/ span 4;
+}
+
+.line_chart_title{
+    font-size: 1.3em;
+    text-align:center;
+    color: #003399;
+    padding:0.25em 0 0.25em 0.195em;
+}
+
+.world_line_title{
+    grid-column: 1/ span 4;
+    font-size: 1.3em;
+    text-align:center;
+    color: #003399;
+}
+
+.temp_item_2{
+    grid-column: 1/ span 4;
+}
+
+.temp_item_3{
+    grid-column: 1/ span 2;
+    font-size: 1.3em;
+    text-align:center;
+    color: #003399;
+    margin:0.25em 0 0 0;
+}
+
+.temp_item_4{
+ grid-column: 3/ span 4;
+}
+
+.temp_item_5{
+ grid-column: 1/ span 4;
+}
+
+.temp_item_6{
+ grid-column: 1/ span 4;
+    margin:0.25em 0 0 0;
+    color: #003399;
+     font-size: 1.3em;
+    text-align:center;
+}
+
+.temp_item_7{
+ grid-column: 1/ span 4;
+}
+
+.temp_item_8{
+ grid-column: 1/ span 4;
+}
+
+.temp_item_9{
+    grid-column: 1;
+    color: #003399;
+    font-size: 1.29em;
+    text-align:center;
+    margin:0.3em 0 0 0;
+}
+
+.temp_item_10{
+ grid-column: 2/span 4;
+}
+
+.temp_item_11{
+ grid-column: 1/span 4;
+}
+
+.stat_model_title{
+    font-size:1.5em;
+}
+
+.stat_radio_buttons_output{
+    margin:0 1.5em 0 0;
+}
+
+.stat_radio{
+    display: grid;
+    grid-template-columns:9em 10em;
+    color:#034694;
+    font-size:1.2em;
+    margin:0.1em 0 0 0;
+}
+
+.stat_models_main{
+    display: grid;
+    grid-template-columns:12em 20em;
+    grid-gap:  1px;
+    color:#003399;
+}
+
+.stat_radio_buttons{
+    display:grid;
+    grid-template-columns:10em 10em 10em;
+}
+
+.cluster_model_content{
+    display:grid;
+    grid-template-columns:36.4em 36.4em;
+    margin:1em 0 0 0;
+    grid-gap:1em;
+}
+
+.cluster_item_title{
+    grid-column:1 /span 2;
+    font-size: 2em;
+    text-align: center;
+    color:#003399;
+    margin:0.2em 0 0.2em 0;
+}
+
+.cluster_item_2{
+    grid-column:1 /span 2;
+}
+
+.cluster_item_4{
+    grid-column:1;
+    font-size: 1.5em;
+    text-align: justify;
+    color:#003399;
+    margin:1em 0 0 0;
+}
+
+.cluster_item_5{
+    grid-column:2;
+}
+
+.cluster_item_7{
+    grid-column:1;
+    font-size: 1.7em;
+    text-align: justify;
+    color:#003399;
+    margin:1em 0 0 0;
+}
+
+.cluster_item_8{
+    grid-column:2;
+}
+
+.cluster_item_10{
+    grid-column:1 span/ 2;
+}
+
+.cluster_image{
+    width:1160px;
+    height:730px;
+}
+
+.forecast_model_content{
+    display:grid;
+    grid-template-columns:36.4em 36.4em;
+    margin:1em 0 0 0;
+    grid-gap:1em;
+}
+
+.forecast_item_title{
+    grid-column:1 /span 2;
+    font-size: 2em;
+    text-align: center;
+    color:#003399;
+    margin:0.2em 0 0.2em 0;
+}
+
+.forecast_item_2{
+    grid-column:1 /span 2;
+    font-size: 1.5em;
+    text-align: justify;
+    color:#003399;
+}
+
+.forecast_item_3{
+    grid-column:1 /span 2;
+}
+
+.forecast_item_5{
+    grid-column:1 /span 2;
+    font-size: 1.5em;
+    text-align: justify;
+    color:#003399;
+}
+
+.forecast_item_7{
+    grid-column:1/ span 2;
+    font-size: 1.5em;
+    text-align: justify;
+    color:#003399;
+}
+
+.forecast_item_8{
+    grid-column:1/ span 2;
+}
+
+.forecast_item_10{
+    grid-column:1 /span 2;
+    font-size: 1.5em;
+    text-align: center;
+    color:#003399;
+
+}
+
+
+.forecast_item_11{
+    grid-column:1 /span 2;
+}
+
+@media only screen and (min-width:1500px){
+.climate_visualizations{
+    display: grid;
+    grid-template-columns:24em 24em 24em 24em;
+    grid-gap:1em;
+      overflow: scroll;
+    margin:0 0 0 0.7em;
+}
+
+.number_box_content{
+    margin:2.2em 0px 0 75px;
+    display: grid;
+    grid-template-columns:6em 15em;
+    grid-gap: 1px;
+}
+
+.country_dropdown_content{
+    margin: 1em 0 0 3.5em;
+    width: 17em;
+}
+
+.year_dropdown_content{
+    margin: 0em 0 0 3.5em;
+    width: 17em;
+}
+
+.country_year{
+    margin-left: 5.5em;
+    line-height: 2.8em;
+    color: white;
+    font-size: 1.2em;
+}}
+
